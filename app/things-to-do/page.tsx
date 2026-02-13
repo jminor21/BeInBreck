@@ -5,8 +5,6 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import type { MapPlace } from "../components/PlacesMap";
 
-export const dynamic = "force-dynamic";
-
 const PlacesMap = dynamic(() => import("../components/PlacesMap"), { ssr: false });
 
 
