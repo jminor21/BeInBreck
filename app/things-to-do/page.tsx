@@ -2,7 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import PlacesMap, { type MapPlace } from "../components/PlacesMap";
+import dynamic from "next/dynamic";
+import type { MapPlace } from "../components/PlacesMap";
+
+const PlacesMap = dynamic(() => import("../components/PlacesMap"), { ssr: false });
+
 
 type PlaceCategory =
   | "Lake"
